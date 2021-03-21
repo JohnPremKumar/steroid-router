@@ -130,6 +130,13 @@ routeHandler.navigateTo(url, withStack?, state?, title?);
  - `state` (optional) - state object to pass to the route
  - `title` (optional) - Title of the route - not widely adopted (Refer: https://github.com/whatwg/html/issues/2174 for more details)
 
+Server
+-------
+Make sure your backend server is configured to serve the respective html files where the routes are defined.
+
+For more detailed information about different types of routing refer the article below:
+https://johnpremkumar.medium.com/routing-a-delusion-among-developers-9c34e6fddd47
+
 
 Used By
 -------
