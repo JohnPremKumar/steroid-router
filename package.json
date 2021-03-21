@@ -20,6 +20,14 @@
     "type": "git",
     "url": "git://github.com/JohnPremKumar/steroid-router.git"
   },
+  "files": [
+    "dist",
+    "LICENCE",
+    "package.json",
+    "package-lock.json",
+    "README.MD",
+    "rollup.config.js"
+  ],
   "author": "John Prem Kumar S",
   "license": "MIT",
   "description": "A simple client side router for vanilla JS applications.",
