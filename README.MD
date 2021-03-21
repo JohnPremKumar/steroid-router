@@ -156,6 +156,6 @@ MIT
 
 [npm]: https://img.shields.io/npm/v/steroid-router.svg
 [npm-url]: https://npmjs.com/package/steroid-router
-[license]: https://img.shields.io/npm/l/steroid-router
+[license]: https://img.shields.io/npm/l/steroid-router?no-cache
 [license-url]: https://github.com/JohnPremKumar/steroid-router/blob/main/LICENCE
 
