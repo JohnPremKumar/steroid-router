@@ -12,6 +12,7 @@ const router = (routes, options = {}) => {
         const routeData = {
           matched,
           params: {},
+          state: window.history.state || {},
         };
         routeVars.forEach((value, index) => {
           routeData.params[value.name] = matched[index + 1];

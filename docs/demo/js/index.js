@@ -33,7 +33,7 @@ function indexRoute (data) {
 }
 
 (function () {
-  let routeHander = router([{
+  let routeHandler = router([{
     match: '/course/:courseName?',
     action: courseRoute
   }, {
@@ -49,6 +49,4 @@ function indexRoute (data) {
     match: '(.*)',
     action: routeNotFound
   }]);
-
-
 })();
