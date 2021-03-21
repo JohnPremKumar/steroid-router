@@ -1,11 +1,43 @@
 {
   "name": "steroid-router",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/steroid-router.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [
+    "steroid-router",
+    "routing",
+    "vanilla",
+    "router",
+    "client",
+    "client-side"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JohnPremKumar/steroid-router.git"
   },
   "author": "John Prem Kumar S",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT",
+  "description": "A simple client side router for vanilla JS applications.",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "rollup": "^2.33.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-exclude-dependencies-from-bundle": "^1.1.14",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "path-to-regexp": "^6.2.0"
+  }
 }
