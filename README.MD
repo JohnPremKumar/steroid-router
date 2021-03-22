@@ -42,7 +42,7 @@ router(<routes>, <options>);
 ```javascript
 // path-to-regexp need to be loaded before steroid-router.min.js
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/path-to-regexp@6.2.0/dist/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/steroid-router@latest/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/steroid-router@latest/dist/steroid-router.min.js"></script>
 ...
 <script>
 router(<routes>, <options>);
