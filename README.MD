@@ -40,8 +40,6 @@ router(<routes>, <options>);
 
 ### As legacy javascript files using script tags. ###
 ```javascript
-// path-to-regexp need to be loaded before steroid-router.min.js
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/path-to-regexp@6.2.0/dist/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/steroid-router@latest/dist/steroid-router.min.js"></script>
 ...
 <script>
@@ -105,7 +103,7 @@ Note: Always first matching route will be used.
 
 Navigation
 ----------
-steroid-router supports both declative and imperative navigation approach
+steroid-router supports both declarative and imperative navigation approach
 
 ### Declarative navigation
 Just add the class `steroid-route` to the anchor tag `<a>` to make it as steroid route.
@@ -117,18 +115,19 @@ where,
 
 Additonally, optinal navigation parameters can be passed using `data-*` attributes like below:
 ```html
-<a class="steroid-route" href="/course" data-withstack="true" data-withstate='{"id":2}' data-withtitle="course">Course</a>
+<a class="steroid-route" href="/course" data-withstack="true" data-withstate='{"id":2}' data-withtitle="course" data-withaction="true">Course</a>
 ```
 ###  Imperative navigation
 Router function returns object with navigation menthod named navigateTo()
 ```javascript
-routeHandler.navigateTo(url, withStack?, state?, title?);
+routeHandler.navigateTo(url, withStack?, state?, title?, action?);
 ```
 
  - `url` - the client side route to navigate to
  - `withStack` (optional) - whether the current route route need to be stacked. `default: false`
  - `state` (optional) - state object to pass to the route
  - `title` (optional) - Title of the route - not widely adopted (Refer: https://github.com/whatwg/html/issues/2174 for more details)
+ - `action` (optional) - Whether route action should be triggered - useful for post navigation url updates. `default: true`
 
 Server
 -------

@@ -13,8 +13,6 @@ export default [
     input,
     plugins: [
       nodeResolve(),
-      excludeDependenciesFromBundle(),
-      commonjs(),
       babel({
         babelHelpers: "bundled",
       }),

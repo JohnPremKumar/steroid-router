@@ -23,13 +23,15 @@ const router = (routes, options = {}) => {
     }
   };
 
-  const navigateTo = (url, withStack = false, state = {}, title = '') => {
+  const navigateTo = (url, withStack = false, state = {}, title = '', action = true) => {
     if (!withStack) {
       window.history.replaceState(state, title, url);
     } else {
       window.history.pushState(state, title, url);
     }
-    handleRoute();
+    if (action) {
+      handleRoute();
+    }
   };
 
   const listener = () => {
@@ -46,7 +48,9 @@ const router = (routes, options = {}) => {
         const withStack = Boolean(target.getAttribute('data-withstack'));
         const withState = target.getAttribute('data-withstate');
         const withTitle = target.getAttribute('data-withtitle');
-        navigateTo(path, (currentPath !== path && withStack), JSON.parse(withState), withTitle || '');
+        let withAction = target.getAttribute('data-withaction');
+        withAction = withAction ? Boolean(withAction) : true;
+        navigateTo(path, (currentPath !== path && withStack), JSON.parse(withState), withTitle || '', withAction);
       }
     });
   };
